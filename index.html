@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Blog</title>
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<script type="module" src="assets/js/app.js"></script>
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<div class="nav container">
+				<a href="#" class="logo">pcD<span>eveloper</span></a>
+				<a href="#" class="login">Login</a>
+			</div>
+		</header>
+
+		<!-- Home -->
+		<section class="home" id="home">
+			<div class="home_text container">
+				<h2 class="home_title">Blog</h2>
+				<span class="home_subtitle">Stackx Lab</span>
+			</div>
+		</section>
+
+		<!-- Post filter -->
+		<div class="post_filter container">
+			<span class="filter_item" data_filter="all">Todas as categorias</span>
+			<span class="filter_item" data_filter="programming">Programação</span>
+			<span class="filter_item" data_filter="ia"
+				>Inteliência Artificial</span
+			>
+			<span class="filter_item" data_filter="iot">Internet das coisas</span>
+		</div>
+
+		<!-- Posts -->
+		<section class="post container">
+			<!-- Post Box 1 -->
+			<div class="post_box programming" data_post_box data_post>
+				<img
+					class="post_img"
+					src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800"
+					alt="Imagem de um tela de códigos de programação"
+				/>
+				<h2 class="category">Programação</h2>
+				<p class="post_title">JavaScript</p>
+				<span class="post_date" data_date>Data</span>
+
+				<p class="post_description">
+					É uma <strong>linguagem de programação</strong> interpretada
+					estruturada, de script em alto nível.
+				</p>
+
+				<div class="profile">
+					<img
+						class="profile_img"
+						src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=800"
+						alt="Imagem de perfil"
+					/>
+					<span class="category" data_views_programming>0</span>
+					<span class="category">visualizações</span>
+				</div>
+			</div>
+
+			<!-- Post Box 2 -->
+			<div class="post_box ia" data_post_box data_post>
+				<img
+					class="post_img"
+					src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=800"
+					alt="Imagem de uma pessoa segurando um laptop"
+				/>
+				<h2 class="category">Inteliência Artificial</h2>
+				<p class="post_title">HandTalk</p>
+				<span class="post_date" data_date>Data</span>
+
+				<p class="post_description">
+					A plataforma <strong>traduz automaticamente</strong> textos e
+					áudios em português para Libras e para a Língua Americana de
+					Sinais (ASL).
+				</p>
+
+				<!-- Profile -->
+				<div class="profile">
+					<img
+						class="profile_img"
+						src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=800"
+						alt="Foto de perfil"
+					/>
+					<span class="category" data_views_ia>0</span>
+					<span class="category">visualizações</span>
+				</div>
+			</div>
+
+			<!-- Post Box 3 -->
+			<div class="post_box iot" data_post_box data_post>
+				<img
+					class="post_img"
+					src="https://images.pexels.com/photos/18186205/pexels-photo-18186205/free-photo-of-cftv-alarme-alarmar-aplicativo.jpeg?auto=compress&cs=tinysrgb&w=800"
+					alt="Imagem de dispositivos eletrônicos inteligentes"
+				/>
+				<h2 class="category">Internet das coisas</h2>
+				<p class="post_title">Google Glass</p>
+				<span class="post_date" data_date>Data</span>
+
+				<p class="post_description">
+					É um <strong>acessório em forma de óculos</strong> que
+					possibilita a interação dos usuários com conteúdos em realidade
+					aumentada.
+				</p>
+
+				<div class="profile">
+					<img
+						class="profile_img"
+						src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=800"
+						alt="Foto de perfil"
+					/>
+					<span class="category" data_views_iot>0</span>
+					<span class="category">visualizações</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<div class="footer container">
+			<p>leonardo_santos</p>
+
+			<div class="social">
+				<a href="https://www.linkedin.com/in/leojosantos/" target="_blank" rel="external">
+					<i class="bx bxl-linkedin"></i>
+				</a>
+
+				<a href="https://github.com/leojosants" target="_blank" rel="external">
+					<i class="bx bxl-github"></i>
+				</a>
+
+				<a href="https://wa.me/5532999447711" target="_blank" rel="external">
+					<i class="bx bxl-whatsapp"></i>
+				</a>
+
+			</div>
+		</div>
+	</body>
+</html>
