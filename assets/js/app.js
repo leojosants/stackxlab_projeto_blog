@@ -50,7 +50,6 @@ data_date.forEach((date) => {
 });
 
 document.addEventListener('click', (event) => {
-    // event.preventDefault();
     const data_filter = event.target.getAttribute('data_filter');
 
     switch (data_filter) {

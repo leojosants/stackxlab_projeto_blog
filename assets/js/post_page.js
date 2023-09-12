@@ -14,24 +14,24 @@ data_date.forEach((date) => {
     date.innerHTML = `${date_now} ${time_now}`;
 });
 
-for (let dbs of db) {
-    if (parseInt(localStorage.getItem('indice')) === dbs.indice_1) {
-        data_title_post.innerHTML = dbs.title_1;
-        data_header_img.setAttribute(dbs.attribute_1, dbs.address_1);
-        data_views.innerHTML = dbs.views_1;
-        data_text.innerHTML = dbs.text_1;
+for (let data of db) {
+    if (parseInt(localStorage.getItem('indice')) === data.indice_1) {
+        data_title_post.innerHTML = data.title_1;
+        data_header_img.setAttribute(data.attribute_1, data.address_1);
+        data_views.innerHTML = data.views_1;
+        data_text.innerHTML = data.text_1;
     }
-    else if (parseInt(localStorage.getItem('indice')) === dbs.indice_2) {
-        data_title_post.innerHTML = dbs.title_2;
-        data_header_img.setAttribute(dbs.attribute_2, dbs.address_2);
-        data_views.innerHTML = dbs.views_2;
-        data_text.innerHTML = dbs.text_2;
+    else if (parseInt(localStorage.getItem('indice')) === data.indice_2) {
+        data_title_post.innerHTML = data.title_2;
+        data_header_img.setAttribute(data.attribute_2, data.address_2);
+        data_views.innerHTML = data.views_2;
+        data_text.innerHTML = data.text_2;
     }
-    else if (parseInt(localStorage.getItem('indice')) === dbs.indice_3) {
-        data_title_post.innerHTML = dbs.title_3;
-        data_header_img.setAttribute(dbs.attribute_3, dbs.address_3);
-        data_views.innerHTML = dbs.views_3;
-        data_text.innerHTML = dbs.text_3;
+    else if (parseInt(localStorage.getItem('indice')) === data.indice_3) {
+        data_title_post.innerHTML = data.title_3;
+        data_header_img.setAttribute(data.attribute_3, data.address_3);
+        data_views.innerHTML = data.views_3;
+        data_text.innerHTML = data.text_3;
     };
 };
 
