@@ -36,6 +36,42 @@ for (let data of db) {
         data_header_img.setAttribute(data.attribute_3, data.address_3);
         data_views.innerHTML = data.views_3;
         data_text.innerHTML = data.text_3;
+    }
+    else if (parseInt(localStorage.getItem('indice')) === data.indice_4) {
+        data_title_post.innerHTML = data.title_4;
+        data_header_img.setAttribute(data.attribute_4, data.address_4);
+        data_views.innerHTML = data.views_4;
+        data_text.innerHTML = data.text_4;
+    }
+    else if (parseInt(localStorage.getItem('indice')) === data.indice_5) {
+        data_title_post.innerHTML = data.title_5;
+        data_header_img.setAttribute(data.attribute_5, data.address_5);
+        data_views.innerHTML = data.views_5;
+        data_text.innerHTML = data.text_5;
+    }
+    else if (parseInt(localStorage.getItem('indice')) === data.indice_6) {
+        data_title_post.innerHTML = data.title_6;
+        data_header_img.setAttribute(data.attribute_6, data.address_6);
+        data_views.innerHTML = data.views_6;
+        data_text.innerHTML = data.text_6;
+    }
+    else if (parseInt(localStorage.getItem('indice')) === data.indice_7) {
+        data_title_post.innerHTML = data.title_7;
+        data_header_img.setAttribute(data.attribute_7, data.address_7);
+        data_views.innerHTML = data.views_7;
+        data_text.innerHTML = data.text_7;
+    }
+    else if (parseInt(localStorage.getItem('indice')) === data.indice_8) {
+        data_title_post.innerHTML = data.title_8;
+        data_header_img.setAttribute(data.attribute_8, data.address_8);
+        data_views.innerHTML = data.views_8;
+        data_text.innerHTML = data.text_8;
+    }
+    else if (parseInt(localStorage.getItem('indice')) === data.indice_9) {
+        data_title_post.innerHTML = data.title_9;
+        data_header_img.setAttribute(data.attribute_9, data.address_9);
+        data_views.innerHTML = data.views_9;
+        data_text.innerHTML = data.text_9;
     };
 };
 
