@@ -1,8 +1,11 @@
+/* imports */
 import { localStorageViewsProgramming, localStorageViewsIOT, localStorageViewsIA } from "./functions.js";
 
+/* date */
 let date_now = new Date().toLocaleDateString();
 let time_now = new Date().toLocaleTimeString();
 
+/* selection of elements */
 const header = document.querySelector('header');
 const data_post_box = document.querySelectorAll('[data_post_box]');
 const data_date = document.querySelectorAll('[data_date]');

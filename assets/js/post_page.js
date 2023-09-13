@@ -1,8 +1,11 @@
+/* imports */
 import { db } from "./data.js";
 
+/* date */
 let date_now = new Date().toLocaleDateString();
 let time_now = new Date().toLocaleTimeString();
 
+/* selection of elements */
 const header = document.querySelector('header');
 const data_title_post = document.querySelector('[data_title_post]');
 const data_header_img = document.querySelector('[data_header_img]');
@@ -10,6 +13,7 @@ const data_date = document.querySelectorAll('[data_date]');
 const data_views = document.querySelector('[data_views]');
 const data_text = document.querySelector('[data_text]');
 
+/* events */
 data_date.forEach((date) => {
     date.innerHTML = `${date_now} ${time_now}`;
 });
