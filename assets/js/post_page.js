@@ -1,5 +1,5 @@
 /* imports */
-import { db } from "./data.js";
+import { db } from "./db/data.js";
 
 /* date */
 let date_now = new Date().toLocaleDateString();

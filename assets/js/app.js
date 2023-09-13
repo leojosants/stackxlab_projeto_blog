@@ -1,15 +1,26 @@
-/* imports */
+/* set localStorage */
 import {
-    localStorageViewsJS,
-    localStorageViewsHandTalk,
-    localStorageViewsPython,
-    localStorageViewsPHP,
-    localStorageViewsAdobeFirefly,
-    localStorageViewsMidjourney,
-    localStorageViewsGoogleGlass,
-    localStorageViewsSmartwatch,
-    localStorageViewsDrone,
-} from "./functions.js";
+    setViewsJS,
+    setViewsHandTalk,
+    setViewsPython,
+    setViewsPHP,
+    setViewsAdobeFirefly,
+    setViewsMidjourney,
+    setViewsGoogleGlass,
+    setViewsSmartwatch,
+    setViewsDrone,
+} from "./local_storage/save_views_posts.js";
+
+/* get localStorage */
+const views_js = localStorage.getItem('views_js') || '0';
+const views_python = localStorage.getItem('views_python') || '0';
+const views_php = localStorage.getItem('views_php') || '0';
+const views_hand_talk = localStorage.getItem('views_hand_talk') || '0';
+const views_adobe_firefly = localStorage.getItem('views_adobe_firefly') || '0';
+const views_midjourney = localStorage.getItem('views_midjourney') || '0';
+const views_google_glass = localStorage.getItem('views_google_glass') || '0';
+const views_smartwatch = localStorage.getItem('views_smartwatch') || '0';
+const views_drone = localStorage.getItem('views_drone') || '0';
 
 /* date */
 let date_now = new Date().toLocaleDateString();
@@ -33,75 +44,76 @@ const data_views_google_glass = document.querySelector('[data_views_google_glass
 const data_views_smartwatch = document.querySelector('[data_views_smartwatch]');
 const data_views_drone = document.querySelector('[data_views_drone]');
 
-data_views_js.innerHTML = localStorage.getItem('views_js') || '0';
-data_views_python.innerHTML = localStorage.getItem('views_python') || '0';
-data_views_php.innerHTML = localStorage.getItem('views_php') || '0';
+data_views_js.innerHTML = views_js;
+data_views_python.innerHTML = views_python;
+data_views_php.innerHTML = views_php;
 
-data_views_hand_talk.innerHTML = localStorage.getItem('views_hand_talk') || '0';
-data_views_adobe_firefly.innerHTML = localStorage.getItem('views_adobe_firefly') || '0';
-data_views_midjourney.innerHTML = localStorage.getItem('views_midjourney') || '0';
+data_views_hand_talk.innerHTML = views_hand_talk;
+data_views_adobe_firefly.innerHTML = views_adobe_firefly;
+data_views_midjourney.innerHTML = views_midjourney;
 
-data_views_google_glass.innerHTML = localStorage.getItem('views_google_glass') || '0';
-data_views_smartwatch.innerHTML = localStorage.getItem('views_smartwatch') || '0';
-data_views_drone.innerHTML = localStorage.getItem('views_drone') || '0';
+data_views_google_glass.innerHTML = views_google_glass;
+data_views_smartwatch.innerHTML = views_smartwatch;
+data_views_drone.innerHTML = views_drone;
 
 /* event */
 data_post.forEach((post, indice) => {
     post.addEventListener('click', () => {
+
         localStorage.setItem('indice', indice + 1);
 
         switch (post.classList[1]) {
             case 'js':
                 data_views_js.innerHTML = parseInt(data_views_js.innerHTML) + 1;
-                localStorageViewsJS(data_views_js);
+                setViewsJS(data_views_js);
                 window.location.assign('post_page.html');
                 break;
-            
+
             case 'python':
                 data_views_python.innerHTML = parseInt(data_views_python.innerHTML) + 1;
-                localStorageViewsPython(data_views_python);
+                setViewsPython(data_views_python);
                 window.location.assign('post_page.html');
                 break;
-            
+
             case 'php':
                 data_views_php.innerHTML = parseInt(data_views_php.innerHTML) + 1;
-                localStorageViewsPHP(data_views_php);
+                setViewsPHP(data_views_php);
                 window.location.assign('post_page.html');
                 break;
 
             case 'hand_talk':
                 data_views_hand_talk.innerHTML = parseInt(data_views_hand_talk.innerHTML) + 1;
-                localStorageViewsHandTalk(data_views_hand_talk);
+                setViewsHandTalk(data_views_hand_talk);
                 window.location.assign('post_page.html');
                 break;
-            
+
             case 'adobe_firefly':
                 data_views_adobe_firefly.innerHTML = parseInt(data_views_adobe_firefly.innerHTML) + 1;
-                localStorageViewsAdobeFirefly(data_views_adobe_firefly);
+                setViewsAdobeFirefly(data_views_adobe_firefly);
                 window.location.assign('post_page.html');
                 break;
-            
+
             case 'midjourney':
                 data_views_midjourney.innerHTML = parseInt(data_views_midjourney.innerHTML) + 1;
-                localStorageViewsMidjourney(data_views_midjourney);
+                setViewsMidjourney(data_views_midjourney);
                 window.location.assign('post_page.html');
                 break;
 
             case 'google_glass':
                 data_views_google_glass.innerHTML = parseInt(data_views_google_glass.innerHTML) + 1;
-                localStorageViewsGoogleGlass(data_views_google_glass);
+                setViewsGoogleGlass(data_views_google_glass);
                 window.location.assign('post_page.html');
                 break;
-            
+
             case 'smartwatch':
                 data_views_smartwatch.innerHTML = parseInt(data_views_smartwatch.innerHTML) + 1;
-                localStorageViewsSmartwatch(data_views_smartwatch);
+                setViewsSmartwatch(data_views_smartwatch);
                 window.location.assign('post_page.html');
                 break;
-            
+
             case 'drone':
                 data_views_drone.innerHTML = parseInt(data_views_drone.innerHTML) + 1;
-                localStorageViewsDrone(data_views_drone);
+                setViewsDrone(data_views_drone);
                 window.location.assign('post_page.html');
                 break;
 
