@@ -21,62 +21,71 @@ for (let data of db) {
         case data.indice_1:
             data_title_post.innerHTML = data.title_1;
             data_header_img.setAttribute(data.attribute_1, data.address_1);
+            data_header_img.setAttribute('alt', data.alt_1);
             data_views.innerHTML = data.views_1;
             data_text.innerHTML = data.text_1;
             break;
-        
+
         case data.indice_2:
             data_title_post.innerHTML = data.title_2;
             data_header_img.setAttribute(data.attribute_2, data.address_2);
+            data_header_img.setAttribute('alt', data.alt_2);
             data_views.innerHTML = data.views_2;
             data_text.innerHTML = data.text_2;
             break;
-        
+
         case data.indice_3:
             data_title_post.innerHTML = data.title_3;
             data_header_img.setAttribute(data.attribute_3, data.address_3);
+            data_header_img.setAttribute('alt', data.alt_3);
             data_views.innerHTML = data.views_3;
             data_text.innerHTML = data.text_3;
             break;
-        
+
         case data.indice_4:
             data_title_post.innerHTML = data.title_4;
             data_header_img.setAttribute(data.attribute_4, data.address_4);
+            data_header_img.setAttribute('alt', data.alt_4);
             data_views.innerHTML = data.views_4;
             data_text.innerHTML = data.text_4;
             break;
-        
+
         case data.indice_5:
             data_title_post.innerHTML = data.title_5;
             data_header_img.setAttribute(data.attribute_5, data.address_5);
+            data_header_img.setAttribute('alt', data.alt_5);
             data_views.innerHTML = data.views_5;
             data_text.innerHTML = data.text_5;
             break;
-        
+
         case data.indice_6:
             data_title_post.innerHTML = data.title_6;
             data_header_img.setAttribute(data.attribute_6, data.address_6);
+            data_header_img.setAttribute('alt', data.alt_6);
             data_views.innerHTML = data.views_6;
             data_text.innerHTML = data.text_6;
             break;
-        
+
         case data.indice_7:
             data_title_post.innerHTML = data.title_7;
             data_header_img.setAttribute(data.attribute_7, data.address_7);
+            data_header_img.setAttribute('alt', data.alt_7);
             data_views.innerHTML = data.views_7;
             data_text.innerHTML = data.text_7;
             break;
-        
+
         case data.indice_8:
             data_title_post.innerHTML = data.title_8;
             data_header_img.setAttribute(data.attribute_8, data.address_8);
+            data_header_img.setAttribute('alt', data.alt_8);
             data_views.innerHTML = data.views_8;
             data_text.innerHTML = data.text_8;
             break;
-        
+
         case data.indice_9:
             data_title_post.innerHTML = data.title_9;
             data_header_img.setAttribute(data.attribute_9, data.address_9);
+            data_header_img.setAttribute('alt', data.alt_9);
             data_views.innerHTML = data.views_9;
             data_text.innerHTML = data.text_9;
             break;
