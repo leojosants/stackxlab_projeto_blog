@@ -27,6 +27,7 @@ let date_now = new Date().toLocaleDateString();
 let time_now = new Date().toLocaleTimeString();
 
 /* selection of elements */
+const back_to_top = document.querySelector('#back_to_top');
 const header = document.querySelector('header');
 const data_post_box = document.querySelectorAll('[data_post_box]');
 const data_date = document.querySelectorAll('[data_date]');
@@ -170,4 +171,25 @@ document.addEventListener('click', (event) => {
 
 window.addEventListener('scroll', () => {
     header.classList.toggle('shadow', window.scrollY > 0);
+});
+
+window.addEventListener('scroll', function () {
+    const scroll_top = window.pageXOffset || document.documentElement.scrollTop;
+
+    if (scroll_top > 1000) {
+        back_to_top.style.display = 'block';
+    }
+    else {
+        back_to_top.style.display = 'none';
+    };
+});
+
+/* */
+back_to_top.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
 });

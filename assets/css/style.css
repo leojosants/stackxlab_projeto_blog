@@ -328,6 +328,27 @@ header.shadow .logo {
     display: none;
 }
 
+#back_to_top {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+#back_to_top:hover {
+    background-color: var(--second-color);
+}
+
+.bx:hover {
+    transition: 0.3s;
+}
+
 /* Responsible */
  @media (max-width: 1060px) {
     .container {
