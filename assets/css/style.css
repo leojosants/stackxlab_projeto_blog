@@ -140,6 +140,10 @@ header.shadow .logo {
 
 }
 
+.filter_item--active {
+    background: var(--second-color);
+}
+
 /* Posts */
 .post {
     display: grid;

@@ -27,6 +27,7 @@ let date_now = new Date().toLocaleDateString();
 let time_now = new Date().toLocaleTimeString();
 
 /* selection of elements */
+const data_filters = document.querySelectorAll('[data_filter]');
 const back_to_top = document.querySelector('#back_to_top');
 const header = document.querySelector('header');
 const data_post_box = document.querySelectorAll('[data_post_box]');
@@ -56,6 +57,56 @@ data_views_midjourney.innerHTML = views_midjourney;
 data_views_google_glass.innerHTML = views_google_glass;
 data_views_smartwatch.innerHTML = views_smartwatch;
 data_views_drone.innerHTML = views_drone;
+
+/* */
+data_date.forEach((date) => {
+    date.innerHTML = `${date_now} ${time_now}`;
+});
+
+/* */
+function addFilterItemActive(data) { 
+    data.classList.add('filter_item--active');
+};
+/* */
+function delFilterItemActive(data) { 
+    data.classList.remove('filter_item--active');
+};
+
+/* */ 
+function activateItem(data, data_event) {
+    if (data_event === 'all') {
+        addFilterItemActive(data[0]);
+        delFilterItemActive(data[1]);
+        delFilterItemActive(data[2]);
+        delFilterItemActive(data[3]); 
+    }
+    else if (data_event === 'programming') {
+        delFilterItemActive(data[0]);
+        addFilterItemActive(data[1]);
+        delFilterItemActive(data[2]);
+        delFilterItemActive(data[3]);
+    }
+    else if (data_event === 'ia') {
+        delFilterItemActive(data[0]);
+        delFilterItemActive(data[1]);
+        addFilterItemActive(data[2]);
+        delFilterItemActive(data[3]);
+    }
+    else if (data_event === 'iot') {
+        delFilterItemActive(data[0]);
+        delFilterItemActive(data[1]);
+        delFilterItemActive(data[2]); 
+        addFilterItemActive(data[3]);
+    };
+};
+
+/* */ 
+data_filters.forEach((item) => {
+    item.addEventListener('click', (event) => {
+        const data_event = event.target.getAttribute('data_filter');
+        activateItem(data_filters, data_event);
+    });
+});
 
 /* event */
 data_post.forEach((post, indice) => {
@@ -124,10 +175,7 @@ data_post.forEach((post, indice) => {
     });
 });
 
-data_date.forEach((date) => {
-    date.innerHTML = `${date_now} ${time_now}`;
-});
-
+/* */
 document.addEventListener('click', (event) => {
     const data_filter = event.target.getAttribute('data_filter');
 
@@ -169,10 +217,12 @@ document.addEventListener('click', (event) => {
     };
 });
 
+/* */
 window.addEventListener('scroll', () => {
     header.classList.toggle('shadow', window.scrollY > 0);
 });
 
+/* */
 window.addEventListener('scroll', function () {
     const scroll_top = window.pageXOffset || document.documentElement.scrollTop;
 
