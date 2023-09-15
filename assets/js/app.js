@@ -67,6 +67,7 @@ data_date.forEach((date) => {
 function addFilterItemActive(data) { 
     data.classList.add('filter_item--active');
 };
+
 /* */
 function delFilterItemActive(data) { 
     data.classList.remove('filter_item--active');
@@ -74,30 +75,63 @@ function delFilterItemActive(data) {
 
 /* */ 
 function activateItem(data, data_event) {
-    if (data_event === 'all') {
-        addFilterItemActive(data[0]);
-        delFilterItemActive(data[1]);
-        delFilterItemActive(data[2]);
-        delFilterItemActive(data[3]); 
-    }
-    else if (data_event === 'programming') {
-        delFilterItemActive(data[0]);
-        addFilterItemActive(data[1]);
-        delFilterItemActive(data[2]);
-        delFilterItemActive(data[3]);
-    }
-    else if (data_event === 'ia') {
-        delFilterItemActive(data[0]);
-        delFilterItemActive(data[1]);
-        addFilterItemActive(data[2]);
-        delFilterItemActive(data[3]);
-    }
-    else if (data_event === 'iot') {
-        delFilterItemActive(data[0]);
-        delFilterItemActive(data[1]);
-        delFilterItemActive(data[2]); 
-        addFilterItemActive(data[3]);
+    switch (data_event) {
+        case 'all':
+            addFilterItemActive(data[0]);
+            delFilterItemActive(data[1]);
+            delFilterItemActive(data[2]);
+            delFilterItemActive(data[3]);
+            break;
+        
+        case 'programming':
+            delFilterItemActive(data[0]);
+            addFilterItemActive(data[1]);
+            delFilterItemActive(data[2]);
+            delFilterItemActive(data[3]);
+            break;
+        
+        case 'ia':
+            delFilterItemActive(data[0]);
+            delFilterItemActive(data[1]);
+            addFilterItemActive(data[2]);
+            delFilterItemActive(data[3]);
+            break;
+        
+        case 'iot':
+            delFilterItemActive(data[0]);
+            delFilterItemActive(data[1]);
+            delFilterItemActive(data[2]);
+            addFilterItemActive(data[3]);
+            break;
+
+        default:
+            break;
     };
+    
+    // if (data_event === 'all') {
+    //     addFilterItemActive(data[0]);
+    //     delFilterItemActive(data[1]);
+    //     delFilterItemActive(data[2]);
+    //     delFilterItemActive(data[3]); 
+    // }
+    // else if (data_event === 'programming') {
+    //     delFilterItemActive(data[0]);
+    //     addFilterItemActive(data[1]);
+    //     delFilterItemActive(data[2]);
+    //     delFilterItemActive(data[3]);
+    // }
+    // else if (data_event === 'ia') {
+    //     delFilterItemActive(data[0]);
+    //     delFilterItemActive(data[1]);
+    //     addFilterItemActive(data[2]);
+    //     delFilterItemActive(data[3]);
+    // }
+    // else if (data_event === 'iot') {
+    //     delFilterItemActive(data[0]);
+    //     delFilterItemActive(data[1]);
+    //     delFilterItemActive(data[2]); 
+    //     addFilterItemActive(data[3]);
+    // };
 };
 
 /* */ 
