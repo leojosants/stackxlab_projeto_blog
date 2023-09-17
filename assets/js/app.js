@@ -24,9 +24,6 @@ const views_drone = localStorage.getItem('views_drone') || '0';
 const popup = document.querySelector('[data_popup]');
 const cancel_button = document.querySelector('[data_calcel_button]');
 
-/* */
-localStorage.removeItem('popup_displayed');
-
 /* date */
 let date_now = new Date().toLocaleDateString();
 let time_now = new Date().toLocaleTimeString();
@@ -285,7 +282,7 @@ back_to_top.addEventListener('click', function (event) {
 
 /* */
 document.addEventListener('mouseout', (event) => {
-    const popup_displayed = localStorage.getItem('popup_displayed');
+    const popup_displayed = sessionStorage.getItem('popup_displayed');
 
     if (!popup_displayed && event.relatedTarget === null) {
         popup.style.display = 'block';
@@ -295,5 +292,5 @@ document.addEventListener('mouseout', (event) => {
 /* */
 cancel_button.addEventListener('click', () => {
     popup.style.display = 'none';
-    localStorage.setItem('popup_displayed', true);
+    sessionStorage.setItem('popup_displayed', true);
 });
