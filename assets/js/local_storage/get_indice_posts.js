@@ -1,0 +1,1 @@
+export const get_indice = parseInt(localStorage.getItem('indice'));

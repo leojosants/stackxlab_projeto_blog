@@ -1,23 +1,25 @@
 /* imports */
 import { db } from "./db/data.js";
-
-/* date */
-let date_now = new Date().toLocaleDateString();
-let time_now = new Date().toLocaleTimeString();
+import { get_indice } from "./local_storage/get_indice_posts.js";
 
 /* selection of elements */
 const data_login_button = document.querySelector('[data_login_button]');
-const back_to_top = document.querySelector('#back_to_top');
 const data_title_post = document.querySelector('[data_title_post]');
 const data_header_img = document.querySelector('[data_header_img]');
+const back_to_top = document.querySelector('#back_to_top');
 const data_date = document.querySelectorAll('[data_date]');
 const data_views = document.querySelector('[data_views]');
 const data_text = document.querySelector('[data_text]');
 const header = document.querySelector('header');
 
-const indice = parseInt(localStorage.getItem('indice'));
+/* localStorage */
+const indice = get_indice;
 
-/* */
+/* date */
+let date_now = new Date().toLocaleDateString();
+let time_now = new Date().toLocaleTimeString();
+
+/* /* login - display alert */
 data_login_button.addEventListener('click', () => {
     alert('Funcionalidade em construção.');
 });
@@ -102,19 +104,19 @@ for (let data of db) {
     };
 };
 
-/* */
+/* generates current date and time */
 data_date.forEach((date) => {
     date.innerHTML = `${date_now} ${time_now}`;
 });
 
-/* */
+/* header - scroll */
 window.addEventListener('scroll', () => {
     header.classList.toggle('shadow', window.scrollY > 0);
 });
 
-/* */
+/* back to top */
 window.addEventListener('scroll', function () {
-    const scroll_top = window.pageXOffset || document.documentElement.scrollTop;
+    const scroll_top = document.documentElement.scrollTop;
 
     if (scroll_top > 100) {
         back_to_top.style.display = 'block';
@@ -124,7 +126,7 @@ window.addEventListener('scroll', function () {
     };
 });
 
-/* */
+/* back to top */
 back_to_top.addEventListener('click', function (event) {
     event.preventDefault();
 

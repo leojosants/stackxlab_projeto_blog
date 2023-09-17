@@ -1,3 +1,15 @@
+import {
+    get_views_adobe_firefly,
+    get_views_google_glass,
+    get_views_midjourney,
+    get_views_smartwatch,
+    get_views_hand_talk,
+    get_views_python,
+    get_views_drone,
+    get_views_php,
+    get_views_js,
+} from "../local_storage/get_views_posts.js";
+
 export const db = [
     {
         indice_1: 1,
@@ -5,7 +17,7 @@ export const db = [
         attribute_1: 'src',
         address_1: 'https://media.istockphoto.com/id/1452604857/pt/foto/businessman-touching-the-brain-working-of-artificial-intelligence-automation-predictive.webp?b=1&s=612x612&w=0&k=20&c=GfPfzOtvAxonlQP997qTJ50qnCaaSHLlYQz67iEUC98=',
         alt_1: 'Imagem ilustrativa logo IA.',
-        views_1: localStorage.getItem('views_adobe_firefly') || '0',
+        views_1: get_views_adobe_firefly,
         text_1: `<strong>O Adobe Firefly</strong> é o primeiro motor de IA para <strong>edição de imagens</strong> que possui preenchimento generativo de imagens. Esta característica do Firefly permite com que o programa faça <strong>alterações nas imagens sem danificar a estrutura</strong> dela, dando a possibilidade dos usuários em adicionar e remover elementos, podendo também estender as imagens usando o <strong>preenchimento generativo</strong> e preenchê-las com com criações da <strong>própria IA</strong>`,
     },
     {
@@ -14,7 +26,7 @@ export const db = [
         attribute_2: 'src',
         address_2: 'https://cdn.pixabay.com/photo/2023/02/07/08/36/computer-language-7773520_640.jpg',
         alt_2: 'Imagem ilustrativa de exemplos de linguagens de programação.',
-        views_2: localStorage.getItem('views_js') || '0',
+        views_2: get_views_js,
         text_2: `<strong>JavaScript</strong> é uma linguagem de programação <strong>interpretada estruturada</strong>, de <strong>script</strong> em alto nível com <strong>tipagem dinâmica fraca</strong> e multiparadigma. Juntamente com HTML e CSS, o JavaScript é <strong>uma das três principais tecnologias</strong> da World Wide Web.`,
     },
     {
@@ -23,7 +35,7 @@ export const db = [
         attribute_3: 'src',
         address_3: 'https://cdn.pixabay.com/photo/2022/04/02/13/47/internet-of-things-7107054_640.jpg',
         alt_3: 'Imagem ilustrativa logo IOT.',
-        views_3: localStorage.getItem('views_google_glass') || '0',
+        views_3: get_views_google_glass,
         text_3: `O <strong>Google Glass</strong> é um acessório em forma de óculos que <strong>possibilita a interação</strong> dos usuários com diversos conteúdos em <strong>realidade aumentada</strong>. Também chamado de Project Glass, o eletrônico é capaz de <strong>tirar fotos a partir de comandos de voz</strong>, enviar mensagens instantâneas e realizar <strong>vídeoconferências</strong>.`,
     },
     {
@@ -32,7 +44,7 @@ export const db = [
         attribute_4: 'src',
         address_4: 'https://media.istockphoto.com/id/1452604857/pt/foto/businessman-touching-the-brain-working-of-artificial-intelligence-automation-predictive.webp?b=1&s=612x612&w=0&k=20&c=GfPfzOtvAxonlQP997qTJ50qnCaaSHLlYQz67iEUC98=',
         alt_4: 'Imagem ilustrativa logo IA.',
-        views_4: localStorage.getItem('views_hand_talk') || '0',
+        views_4: get_views_hand_talk,
         text_4: `Por meio de inteligência artificial, o <strong>aplicativo HandTalk</strong> promove a inclusão de pessoas surdas. A plataforma traduz automaticamente textos e áudios em português para a <strong>Língua Brasileira de Sinais (Libras) e para a Língua Americana de Sinais (ASL)</strong>. A ferramenta usa um avatar digital, o personagem chamado Hugo, para <strong>desenvolver os gestos e facilitar a comunicação com pessoas surdas ou com dificuldade auditiva</strong>. Em 2015, foi eleito como o melhor aplicativo de acessibilidade da América Latina pela ONU.`,
     },
     {
@@ -41,7 +53,7 @@ export const db = [
         attribute_5: 'src',
         address_5: 'https://cdn.pixabay.com/photo/2023/02/07/08/36/computer-language-7773520_640.jpg',
         alt_5: 'Imagem ilustrativa de exemplos de linguagens de programação.',
-        views_5: localStorage.getItem('views_python') || '0',
+        views_5: get_views_python,
         text_5: `Python é uma <strong>linguagem de programação de alto nível</strong>, interpretada de script, imperativa, orientada a objetos, funcional,<strong> de tipagem dinâmica e forte</strong>. Foi lançada por Guido van Rossum em 1991.`,
     },
     {
@@ -50,7 +62,7 @@ export const db = [
         attribute_6: 'src',
         address_6: 'https://cdn.pixabay.com/photo/2022/04/02/13/47/internet-of-things-7107054_640.jpg',
         alt_6: 'Imagem ilustrativa logo IOT.',
-        views_6: localStorage.getItem('views_smartwatch') || '0',
+        views_6: get_views_smartwatch,
         text_6: `É um <strong>relógio de pulso computadorizado</strong> com funcionalidades que <strong>vão além de mostrar as horas</strong>, e é com frequência comparado aos assistentes digitais pessoais.`,
     },
     {
@@ -59,7 +71,7 @@ export const db = [
         attribute_7: 'src',
         address_7: 'https://cdn.pixabay.com/photo/2023/02/07/08/36/computer-language-7773520_640.jpg',
         alt_7: 'Imagem ilustrativa de exemplos de linguagens de programação.',
-        views_7: localStorage.getItem('views_php') || '0',
+        views_7: get_views_php,
         text_7: `PHP é uma <strong>linguagem de programação interpretada livre</strong>, usada originalmente apenas para o <strong>desenvolvimento de aplicações</strong> presentes e atuantes<strong> no lado do servidor</strong>, capazes de gerar conteúdo dinâmico na World Wide Web.`,
     },
     {
@@ -68,7 +80,7 @@ export const db = [
         attribute_8: 'src',
         address_8: 'https://media.istockphoto.com/id/1452604857/pt/foto/businessman-touching-the-brain-working-of-artificial-intelligence-automation-predictive.webp?b=1&s=612x612&w=0&k=20&c=GfPfzOtvAxonlQP997qTJ50qnCaaSHLlYQz67iEUC98=',
         alt_8: 'Imagem ilustrativa logo IA.',
-        views_8: localStorage.getItem('views_midjourney') || '0',
+        views_8: get_views_midjourney,
         text_8: `<strong>Criado pela Midjourney Inc.</strong>, o programa é uma ferramenta que usa <strong>algoritmos avançados de aprendizado de máquina</strong> para gerar imagens a partir de texto. Alguns <strong>resultados são impressionantes</strong>, quase como retirados de artes conceituais para filmes, <strong>enquanto outros podem ser bizarramente</strong> engraçados.`,
     },
     {
@@ -77,7 +89,7 @@ export const db = [
         attribute_9: 'src',
         address_9: 'https://cdn.pixabay.com/photo/2022/04/02/13/47/internet-of-things-7107054_640.jpg',
         alt_9: 'Imagem ilustrativa logo IOT.',
-        views_9: localStorage.getItem('views_drone') || '0',
+        views_9: get_views_drone,
         text_9: `<strong>Veículo aéreo não tripulado</strong>, também conhecido como drone, é todo
         e qualquer tipo de aeronave que pode ser <strong>controlada nos 3 eixos</strong> e
         que não necessite de <strong>pilotos embarcados</strong> para ser guiada.`,
