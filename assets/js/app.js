@@ -21,6 +21,11 @@ const views_midjourney = localStorage.getItem('views_midjourney') || '0';
 const views_google_glass = localStorage.getItem('views_google_glass') || '0';
 const views_smartwatch = localStorage.getItem('views_smartwatch') || '0';
 const views_drone = localStorage.getItem('views_drone') || '0';
+const popup = document.querySelector('[data_popup]');
+const cancel_button = document.querySelector('[data_calcel_button]');
+
+/* */
+localStorage.removeItem('popup_displayed');
 
 /* date */
 let date_now = new Date().toLocaleDateString();
@@ -276,4 +281,19 @@ back_to_top.addEventListener('click', function (event) {
         top: 0,
         behavior: 'smooth',
     });
+});
+
+/* */
+document.addEventListener('mouseout', (event) => {
+    const popup_displayed = localStorage.getItem('popup_displayed');
+
+    if (!popup_displayed && event.relatedTarget === null) {
+        popup.style.display = 'block';
+    };
+});
+
+/* */
+cancel_button.addEventListener('click', () => {
+    popup.style.display = 'none';
+    localStorage.setItem('popup_displayed', true);
 });

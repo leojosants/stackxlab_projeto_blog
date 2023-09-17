@@ -12,8 +12,8 @@ const data_header_img = document.querySelector('[data_header_img]');
 const data_date = document.querySelectorAll('[data_date]');
 const data_views = document.querySelector('[data_views]');
 const data_text = document.querySelector('[data_text]');
-
 const header = document.querySelector('header');
+
 const indice = parseInt(localStorage.getItem('indice'));
 
 /* individual card display */
@@ -96,11 +96,12 @@ for (let data of db) {
     };
 };
 
-/* events */
+/* */
 data_date.forEach((date) => {
     date.innerHTML = `${date_now} ${time_now}`;
 });
 
+/* */
 window.addEventListener('scroll', () => {
     header.classList.toggle('shadow', window.scrollY > 0);
 });
