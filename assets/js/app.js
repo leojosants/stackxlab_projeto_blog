@@ -29,6 +29,7 @@ let date_now = new Date().toLocaleDateString();
 let time_now = new Date().toLocaleTimeString();
 
 /* selection of elements */
+const data_login_button = document.querySelector('[data_login_button]');
 const data_filters = document.querySelectorAll('[data_filter]');
 const back_to_top = document.querySelector('#back_to_top');
 const header = document.querySelector('header');
@@ -59,6 +60,11 @@ data_views_midjourney.innerHTML = views_midjourney;
 data_views_google_glass.innerHTML = views_google_glass;
 data_views_smartwatch.innerHTML = views_smartwatch;
 data_views_drone.innerHTML = views_drone;
+
+/* */
+data_login_button.addEventListener('click', () => {
+    alert('Funcionalidade em construção.');
+});
 
 /* */
 data_date.forEach((date) => {

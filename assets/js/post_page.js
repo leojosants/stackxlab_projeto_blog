@@ -6,6 +6,7 @@ let date_now = new Date().toLocaleDateString();
 let time_now = new Date().toLocaleTimeString();
 
 /* selection of elements */
+const data_login_button = document.querySelector('[data_login_button]');
 const back_to_top = document.querySelector('#back_to_top');
 const data_title_post = document.querySelector('[data_title_post]');
 const data_header_img = document.querySelector('[data_header_img]');
@@ -15,6 +16,11 @@ const data_text = document.querySelector('[data_text]');
 const header = document.querySelector('header');
 
 const indice = parseInt(localStorage.getItem('indice'));
+
+/* */
+data_login_button.addEventListener('click', () => {
+    alert('Funcionalidade em construção.');
+});
 
 /* individual card display */
 for (let data of db) {
