@@ -17,7 +17,7 @@ import {
 /* selection of elements */
 const elements_html = {
     data_login_button: document.querySelector('[data_login_button]'),
-    data_cancel_button: document.querySelector('[data_cancel_button]'),
+    data_cancel_popup_button: document.querySelector('[data_cancel_button]'),
     data_back_to_top: document.querySelector('[data_back_to_top]'),
     data_post_box: document.querySelectorAll('[data_post_box]'),
     data_filters: document.querySelectorAll('[data_filter]'),
@@ -49,6 +49,12 @@ const get_views_local_storage = {
     views_js: get_views_posts.js,
 };
 
+/* date */
+const date_time_now = {
+    date: new Date().toLocaleDateString(),
+    time: new Date().toLocaleTimeString(),
+};
+
 /* assigning data from local storage */
 elements_html.data_views_adobe_firefly.innerHTML = get_views_local_storage.views_adobe_firefly;
 elements_html.data_views_google_glass.innerHTML = get_views_local_storage.views_google_glass;
@@ -59,12 +65,6 @@ elements_html.data_views_python.innerHTML = get_views_local_storage.views_python
 elements_html.data_views_drone.innerHTML = get_views_local_storage.views_drone;
 elements_html.data_views_php.innerHTML = get_views_local_storage.views_php;
 elements_html.data_views_js.innerHTML = get_views_local_storage.views_js;
-
-/* date */
-const date_time_now = {
-    date: new Date().toLocaleDateString(),
-    time: new Date().toLocaleTimeString(),
-};
 
 /* generate current date and time */
 elements_html.data_date.forEach((date) => {
@@ -276,7 +276,7 @@ document.addEventListener('mouseout', (event) => {
 });
 
 /* popup exit */
-elements_html.data_cancel_button.addEventListener('click', () => {
+elements_html.data_cancel_popup_button.addEventListener('click', () => {
     elements_html.data_popup.style.display = 'none';
     sessionStorage.setItem('popup_displayed', true);
 });
