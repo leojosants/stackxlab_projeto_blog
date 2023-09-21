@@ -6,7 +6,7 @@ import { get_indice } from "./local_storage/get_indice_posts.js";
 const data_login_button = document.querySelector('[data_login_button]');
 const data_title_post = document.querySelector('[data_title_post]');
 const data_header_img = document.querySelector('[data_header_img]');
-const back_to_top = document.querySelector('#back_to_top');
+const back_to_top = document.querySelector('[data_back_to_top]');
 const data_date = document.querySelectorAll('[data_date]');
 const data_views = document.querySelector('[data_views]');
 const data_text = document.querySelector('[data_text]');
