@@ -2,6 +2,9 @@
 import { db } from "./db/data.js";
 import { get_indice } from "./local_storage/get_indice_posts.js";
 
+/* localStorage */
+const indice = get_indice;
+
 /* selection of elements */
 const elements_html = {
     data_login_button: document.querySelector('[data_login_button]'),
@@ -14,19 +17,11 @@ const elements_html = {
     header: document.querySelector('header'),
 };
 
-/* localStorage */
-const indice = get_indice;
-
 /* date */
 const date_time_now = {
     date: new Date().toLocaleDateString(),
     time: new Date().toLocaleTimeString(),
 };
-
-/* /* login - display alert */
-elements_html.data_login_button.addEventListener('click', () => {
-    alert('Funcionalidade em construção.');
-});
 
 /* individual card display */
 for (let data of db) {
@@ -113,13 +108,18 @@ elements_html.data_date.forEach((date) => {
     date.innerHTML = `${date_time_now.date} ${date_time_now.time}`;
 });
 
+/* login - display alert */
+elements_html.data_login_button.addEventListener('click', () => {
+    alert('Funcionalidade em construção.');
+});
+
 /* header - scroll */
 window.addEventListener('scroll', () => {
     elements_html.header.classList.toggle('shadow', window.scrollY > 0);
 });
 
 /* back to top */
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', () => {
     const scroll_top = document.documentElement.scrollTop;
 
     if (scroll_top > 100) {
@@ -131,7 +131,7 @@ window.addEventListener('scroll', function () {
 });
 
 /* back to top */
-elements_html.back_to_top.addEventListener('click', function (event) {
+elements_html.back_to_top.addEventListener('click', (event) => {
     event.preventDefault();
 
     window.scrollTo({
