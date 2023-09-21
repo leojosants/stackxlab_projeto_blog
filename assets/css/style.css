@@ -105,11 +105,6 @@ header.shadow .logo {
     color: var(--color_4);
 }
 
-.login:hover {
-    background-color: var(--color-6);
-    transition: 0.3s;
-}
-
 /* Home */
 .home {
     width: 100%;
@@ -174,7 +169,7 @@ header.shadow .logo {
 }
 
 .post_box:hover {
-    background-color: var(--color_8)
+    background-color: var(--color_8);
 }
 
 .post_img {
@@ -341,6 +336,7 @@ header.shadow .logo {
 }
 
 .hide {
+    opacity: 0;
     display: none;
 }
 
