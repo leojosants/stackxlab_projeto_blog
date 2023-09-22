@@ -16,26 +16,32 @@ import {
 
 /* initialization */
 function startApp() {
-    
+
     /* selection of elements */
     const elements_html = {
+        views: {
+            data_views_adobe_firefly: document.querySelector('[data_views_adobe_firefly]'),
+            data_views_google_glass: document.querySelector('[data_views_google_glass]'),
+            data_views_midjourney: document.querySelector('[data_views_midjourney]'),
+            data_views_smartwatch: document.querySelector('[data_views_smartwatch]'),
+            data_views_hand_talk: document.querySelector('[data_views_hand_talk]'),
+            data_views_python: document.querySelector('[data_views_python]'),
+            data_views_drone: document.querySelector('[data_views_drone]'),
+            data_views_php: document.querySelector('[data_views_php]'),
+            data_views_js: document.querySelector('[data_views_js]'),
+        },
+        popup: {
+            data_cancel_popup_button: document.querySelector('[data_cancel_button]'),
+            data_popup: document.querySelector('[data_popup]'),
+        },
+        post: {
+            data_post_box: document.querySelectorAll('[data_post_box]'),
+            data_post: document.querySelectorAll('[data_post]'),
+        },
         data_login_button: document.querySelector('[data_login_button]'),
-        data_cancel_popup_button: document.querySelector('[data_cancel_button]'),
         data_back_to_top: document.querySelector('[data_back_to_top]'),
-        data_post_box: document.querySelectorAll('[data_post_box]'),
         data_filters: document.querySelectorAll('[data_filter]'),
         data_date: document.querySelectorAll('[data_date]'),
-        data_post: document.querySelectorAll('[data_post]'),
-        data_popup: document.querySelector('[data_popup]'),
-        data_views_adobe_firefly: document.querySelector('[data_views_adobe_firefly]'),
-        data_views_google_glass: document.querySelector('[data_views_google_glass]'),
-        data_views_midjourney: document.querySelector('[data_views_midjourney]'),
-        data_views_smartwatch: document.querySelector('[data_views_smartwatch]'),
-        data_views_hand_talk: document.querySelector('[data_views_hand_talk]'),
-        data_views_python: document.querySelector('[data_views_python]'),
-        data_views_drone: document.querySelector('[data_views_drone]'),
-        data_views_php: document.querySelector('[data_views_php]'),
-        data_views_js: document.querySelector('[data_views_js]'),
         header: document.querySelector('header'),
     };
 
@@ -59,15 +65,15 @@ function startApp() {
     };
 
     /* assigning data from local storage */
-    elements_html.data_views_adobe_firefly.innerHTML = get_views_local_storage.views_adobe_firefly;
-    elements_html.data_views_google_glass.innerHTML = get_views_local_storage.views_google_glass;
-    elements_html.data_views_midjourney.innerHTML = get_views_local_storage.views_midjourney;
-    elements_html.data_views_smartwatch.innerHTML = get_views_local_storage.views_smartwatch;
-    elements_html.data_views_hand_talk.innerHTML = get_views_local_storage.views_hand_talk;
-    elements_html.data_views_python.innerHTML = get_views_local_storage.views_python;
-    elements_html.data_views_drone.innerHTML = get_views_local_storage.views_drone;
-    elements_html.data_views_php.innerHTML = get_views_local_storage.views_php;
-    elements_html.data_views_js.innerHTML = get_views_local_storage.views_js;
+    elements_html.views.data_views_adobe_firefly.innerHTML = get_views_local_storage.views_adobe_firefly
+    elements_html.views.data_views_google_glass.innerHTML = get_views_local_storage.views_google_glass;
+    elements_html.views.data_views_midjourney.innerHTML = get_views_local_storage.views_midjourney;
+    elements_html.views.data_views_smartwatch.innerHTML = get_views_local_storage.views_smartwatch;
+    elements_html.views.data_views_hand_talk.innerHTML = get_views_local_storage.views_hand_talk;
+    elements_html.views.data_views_python.innerHTML = get_views_local_storage.views_python;
+    elements_html.views.data_views_drone.innerHTML = get_views_local_storage.views_drone;
+    elements_html.views.data_views_php.innerHTML = get_views_local_storage.views_php;
+    elements_html.views.data_views_js.innerHTML = get_views_local_storage.views_js;
 
     /* generate current date and time */
     elements_html.data_date.forEach((date) => {
@@ -139,7 +145,7 @@ function startApp() {
 
         switch (data_filter) {
             case 'all':
-                elements_html.data_post_box.forEach((post) => {
+                elements_html.post.data_post_box.forEach((post) => {
                     if (!post.classList.contains('all')) {
                         post.style.display = '';
                     };
@@ -147,7 +153,7 @@ function startApp() {
                 break;
 
             case 'programming':
-                elements_html.data_post_box.forEach((post) => {
+                elements_html.post.data_post_box.forEach((post) => {
                     post.classList.contains('programming')
                         ? (post.style.display = '')
                         : (post.style.display = 'none')
@@ -155,7 +161,7 @@ function startApp() {
                 break;
 
             case 'ia':
-                elements_html.data_post_box.forEach((post) => {
+                elements_html.post.data_post_box.forEach((post) => {
                     post.classList.contains('ia')
                         ? (post.style.display = '')
                         : (post.style.display = 'none')
@@ -163,7 +169,7 @@ function startApp() {
                 break;
 
             case 'iot':
-                elements_html.data_post_box.forEach((post) => {
+                elements_html.post.data_post_box.forEach((post) => {
                     post.classList.contains('iot')
                         ? (post.style.display = '')
                         : (post.style.display = 'none')
@@ -176,63 +182,63 @@ function startApp() {
     });
 
     /* select clicked post */
-    elements_html.data_post.forEach((post, indice) => {
+    elements_html.post.data_post.forEach((post, indice) => {
         post.addEventListener('click', () => {
 
             localStorage.setItem('indice', indice + 1);
 
             switch (post.classList[1]) {
                 case 'js':
-                    elements_html.data_views_js.innerHTML = parseInt(elements_html.data_views_js.innerHTML) + 1;
-                    setViewsJS(elements_html.data_views_js);
+                    elements_html.views.data_views_js.innerHTML = parseInt(elements_html.views.data_views_js.innerHTML) + 1;
+                    setViewsJS(elements_html.views.data_views_js);
                     window.location.assign('post_page.html');
                     break;
 
                 case 'python':
-                    elements_html.data_views_python.innerHTML = parseInt(elements_html.data_views_python.innerHTML) + 1;
-                    setViewsPython(elements_html.data_views_python);
+                    elements_html.views.data_views_python.innerHTML = parseInt(elements_html.views.data_views_python.innerHTML) + 1;
+                    setViewsPython(elements_html.views.data_views_python);
                     window.location.assign('post_page.html');
                     break;
 
                 case 'php':
-                    elements_html.data_views_php.innerHTML = parseInt(elements_html.data_views_php.innerHTML) + 1;
-                    setViewsPHP(elements_html.data_views_php);
+                    elements_html.views.data_views_php.innerHTML = parseInt(elements_html.views.data_views_php.innerHTML) + 1;
+                    setViewsPHP(elements_html.views.data_views_php);
                     window.location.assign('post_page.html');
                     break;
 
                 case 'hand_talk':
-                    elements_html.data_views_hand_talk.innerHTML = parseInt(elements_html.data_views_hand_talk.innerHTML) + 1;
-                    setViewsHandTalk(elements_html.data_views_hand_talk);
+                    elements_html.views.data_views_hand_talk.innerHTML = parseInt(elements_html.views.data_views_hand_talk.innerHTML) + 1;
+                    setViewsHandTalk(elements_html.views.data_views_hand_talk);
                     window.location.assign('post_page.html');
                     break;
 
                 case 'adobe_firefly':
-                    elements_html.data_views_adobe_firefly.innerHTML = parseInt(elements_html.data_views_adobe_firefly.innerHTML) + 1;
-                    setViewsAdobeFirefly(elements_html.data_views_adobe_firefly);
+                    elements_html.views.data_views_adobe_firefly.innerHTML = parseInt(elements_html.views.data_views_adobe_firefly.innerHTML) + 1;
+                    setViewsAdobeFirefly(elements_html.views.data_views_adobe_firefly);
                     window.location.assign('post_page.html');
                     break;
 
                 case 'midjourney':
-                    elements_html.data_views_midjourney.innerHTML = parseInt(elements_html.data_views_midjourney.innerHTML) + 1;
-                    setViewsMidjourney(elements_html.data_views_midjourney);
+                    elements_html.views.data_views_midjourney.innerHTML = parseInt(elements_html.views.data_views_midjourney.innerHTML) + 1;
+                    setViewsMidjourney(elements_html.views.data_views_midjourney);
                     window.location.assign('post_page.html');
                     break;
 
                 case 'google_glass':
-                    elements_html.data_views_google_glass.innerHTML = parseInt(elements_html.data_views_google_glass.innerHTML) + 1;
-                    setViewsGoogleGlass(elements_html.data_views_google_glass);
+                    elements_html.views.data_views_google_glass.innerHTML = parseInt(elements_html.views.data_views_google_glass.innerHTML) + 1;
+                    setViewsGoogleGlass(elements_html.views.data_views_google_glass);
                     window.location.assign('post_page.html');
                     break;
 
                 case 'smartwatch':
-                    elements_html.data_views_smartwatch.innerHTML = parseInt(elements_html.data_views_smartwatch.innerHTML) + 1;
-                    setViewsSmartwatch(elements_html.data_views_smartwatch);
+                    elements_html.views.data_views_smartwatch.innerHTML = parseInt(elements_html.views.data_views_smartwatch.innerHTML) + 1;
+                    setViewsSmartwatch(elements_html.views.data_views_smartwatch);
                     window.location.assign('post_page.html');
                     break;
 
                 case 'drone':
-                    elements_html.data_views_drone.innerHTML = parseInt(elements_html.data_views_drone.innerHTML) + 1;
-                    setViewsDrone(elements_html.data_views_drone);
+                    elements_html.views.data_views_drone.innerHTML = parseInt(elements_html.views.data_views_drone.innerHTML) + 1;
+                    setViewsDrone(elements_html.views.data_views_drone);
                     window.location.assign('post_page.html');
                     break;
 
@@ -279,7 +285,7 @@ function startApp() {
     });
 
     /* popup exit */
-    elements_html.data_cancel_popup_button.addEventListener('click', () => {
+    elements_html.popup.data_cancel_popup_button.addEventListener('click', () => {
         elements_html.data_popup.style.display = 'none';
         sessionStorage.setItem('popup_displayed', true);
     });
