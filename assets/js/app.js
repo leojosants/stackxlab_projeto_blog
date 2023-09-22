@@ -94,31 +94,35 @@ function startApp() {
     function activateItem(data, data_event) {
         switch (data_event) {
             case 'all':
-                addFilterItemActive(data[0]);
-                delFilterItemActive(data[1]);
-                delFilterItemActive(data[2]);
-                delFilterItemActive(data[3]);
+                data.forEach((item) => {
+                    item.getAttribute('data_filter') === 'all'
+                        ? addFilterItemActive(item)
+                        : delFilterItemActive(item)
+                });
                 break;
 
             case 'programming':
-                delFilterItemActive(data[0]);
-                addFilterItemActive(data[1]);
-                delFilterItemActive(data[2]);
-                delFilterItemActive(data[3]);
+                data.forEach((item) => {
+                    item.getAttribute('data_filter') === 'programming'
+                        ? addFilterItemActive(item)
+                        : delFilterItemActive(item)
+                });
                 break;
 
             case 'ia':
-                delFilterItemActive(data[0]);
-                delFilterItemActive(data[1]);
-                addFilterItemActive(data[2]);
-                delFilterItemActive(data[3]);
+                data.forEach((item) => {
+                    item.getAttribute('data_filter') === 'ia'
+                        ? addFilterItemActive(item)
+                        : delFilterItemActive(item)
+                });
                 break;
 
             case 'iot':
-                delFilterItemActive(data[0]);
-                delFilterItemActive(data[1]);
-                delFilterItemActive(data[2]);
-                addFilterItemActive(data[3]);
+                data.forEach((item) => {
+                    item.getAttribute('data_filter') === 'iot'
+                        ? addFilterItemActive(item)
+                        : delFilterItemActive(item)
+                });
                 break;
 
             default:
