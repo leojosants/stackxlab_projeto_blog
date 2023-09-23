@@ -284,13 +284,14 @@ function startApp() {
         const popup_displayed = sessionStorage.getItem('popup_displayed');
 
         if (!popup_displayed && event.relatedTarget === null) {
-            elements_html.data_popup.style.display = 'block';
+            // elements_html.data_popup.style.display = 'block';
+            elements_html.popup.data_popup.style.display = 'block';
         };
     });
 
     /* popup exit */
     elements_html.popup.data_cancel_popup_button.addEventListener('click', () => {
-        elements_html.data_popup.style.display = 'none';
+        elements_html.popup.data_popup.style.display = 'none';
         sessionStorage.setItem('popup_displayed', true);
     });
 };
