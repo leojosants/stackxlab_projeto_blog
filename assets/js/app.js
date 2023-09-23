@@ -75,11 +75,6 @@ function startApp() {
     elements_html.views.data_views_php.innerHTML = get_views_local_storage.views_php;
     elements_html.views.data_views_js.innerHTML = get_views_local_storage.views_js;
 
-    /* generate current date and time */
-    elements_html.data_date.forEach((date) => {
-        date.innerHTML = `${date_time_now.date} ${date_time_now.time}`;
-    });
-
     /* add highlight class */
     function addFilterItemActive(data) {
         data.classList.add('filter_item--active');
@@ -130,6 +125,11 @@ function startApp() {
         };
     };
 
+    /* generate current date and time */
+    elements_html.data_date.forEach((date) => {
+        date.innerHTML = `${date_time_now.date} ${date_time_now.time}`;
+    });
+
     /* select the category to be highlighted */
     elements_html.data_filters.forEach((item) => {
         item.addEventListener('click', (event) => {
@@ -140,7 +140,7 @@ function startApp() {
 
     /* login - display alert */
     elements_html.data_login_button.addEventListener('click', () => {
-        alert('Funcionalidade em construção.');
+        alert('Funcionalidade não disponível no momento...');
     });
 
     /* select the clicked category */
