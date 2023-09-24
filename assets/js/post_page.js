@@ -16,9 +16,11 @@ function startApp() {
             data_views: document.querySelector('[data_views]'),
             data_text: document.querySelector('[data_text]'),
         },
-        data_login_button: document.querySelector('[data_login_button]'),
-        back_to_top: document.querySelector('[data_back_to_top]'),
-        header: document.querySelector('header'),
+        others: {
+            data_login_button: document.querySelector('[data_login_button]'),
+            back_to_top: document.querySelector('[data_back_to_top]'),
+            header: document.querySelector('header'),
+        },
     };
 
     /* date */
@@ -116,13 +118,13 @@ function startApp() {
     });
 
     /* login - display alert */
-    elements_html.data_login_button.addEventListener('click', () => {
+    elements_html.others.data_login_button.addEventListener('click', () => {
         alert('Funcionalidade em construção.');
     });
 
     /* header - scroll */
     window.addEventListener('scroll', () => {
-        elements_html.header.classList.toggle('shadow', window.scrollY > 0);
+        elements_html.others.header.classList.toggle('shadow', window.scrollY > 0);
     });
 
     /* back to top */
@@ -138,7 +140,7 @@ function startApp() {
     });
 
     /* back to top */
-    elements_html.back_to_top.addEventListener('click', (event) => {
+    elements_html.others.back_to_top.addEventListener('click', (event) => {
         event.preventDefault();
 
         window.scrollTo({
