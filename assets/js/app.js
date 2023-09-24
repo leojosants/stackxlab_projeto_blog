@@ -38,24 +38,32 @@ function startApp() {
             data_post_box: document.querySelectorAll('[data_post_box]'),
             data_post: document.querySelectorAll('[data_post]'),
         },
-        data_login_button: document.querySelector('[data_login_button]'),
-        data_back_to_top: document.querySelector('[data_back_to_top]'),
-        data_filters: document.querySelectorAll('[data_filter]'),
-        data_date: document.querySelectorAll('[data_date]'),
-        header: document.querySelector('header'),
+        others: {
+            data_login_button: document.querySelector('[data_login_button]'),
+            data_back_to_top: document.querySelector('[data_back_to_top]'),
+            data_filters: document.querySelectorAll('[data_filter]'),
+            data_date: document.querySelectorAll('[data_date]'),
+            header: document.querySelector('header'),
+        },
     };
 
     /* get localStorage */
     const get_views_local_storage = {
-        views_adobe_firefly: get_views_posts.adobe_firefly,
-        views_google_glass: get_views_posts.google_glass,
-        views_smartwatch: get_views_posts.smartwatch,
-        views_midjourney: get_views_posts.midjourney,
-        views_hand_talk: get_views_posts.hand_talk,
-        views_python: get_views_posts.python,
-        views_drone: get_views_posts.drone,
-        views_php: get_views_posts.php,
-        views_js: get_views_posts.js,
+        programming: {
+            views_python: get_views_posts.programming.python,
+            views_php: get_views_posts.programming.php,
+            views_js: get_views_posts.programming.js,
+        },
+        ia: {
+            views_adobe_firefly: get_views_posts.ia.adobe_firefly,
+            views_midjourney: get_views_posts.ia.midjourney,
+            views_hand_talk: get_views_posts.ia.hand_talk,
+        },
+        iot: {
+            views_google_glass: get_views_posts.iot.google_glass,
+            views_smartwatch: get_views_posts.iot.smartwatch,
+            views_drone: get_views_posts.iot.drone,
+        },
     };
 
     /* date */
@@ -65,15 +73,17 @@ function startApp() {
     };
 
     /* assigning data from local storage */
-    elements_html.views.data_views_adobe_firefly.innerHTML = get_views_local_storage.views_adobe_firefly
-    elements_html.views.data_views_google_glass.innerHTML = get_views_local_storage.views_google_glass;
-    elements_html.views.data_views_midjourney.innerHTML = get_views_local_storage.views_midjourney;
-    elements_html.views.data_views_smartwatch.innerHTML = get_views_local_storage.views_smartwatch;
-    elements_html.views.data_views_hand_talk.innerHTML = get_views_local_storage.views_hand_talk;
-    elements_html.views.data_views_python.innerHTML = get_views_local_storage.views_python;
-    elements_html.views.data_views_drone.innerHTML = get_views_local_storage.views_drone;
-    elements_html.views.data_views_php.innerHTML = get_views_local_storage.views_php;
-    elements_html.views.data_views_js.innerHTML = get_views_local_storage.views_js;
+    elements_html.views.data_views_adobe_firefly.innerHTML = get_views_local_storage.ia.views_adobe_firefly
+    elements_html.views.data_views_midjourney.innerHTML = get_views_local_storage.ia.views_midjourney;
+    elements_html.views.data_views_hand_talk.innerHTML = get_views_local_storage.ia.views_hand_talk;
+
+    elements_html.views.data_views_google_glass.innerHTML = get_views_local_storage.iot.views_google_glass;
+    elements_html.views.data_views_smartwatch.innerHTML = get_views_local_storage.iot.views_smartwatch;
+    elements_html.views.data_views_drone.innerHTML = get_views_local_storage.iot.views_drone;
+    
+    elements_html.views.data_views_python.innerHTML = get_views_local_storage.programming.views_python;
+    elements_html.views.data_views_php.innerHTML = get_views_local_storage.programming.views_php;
+    elements_html.views.data_views_js.innerHTML = get_views_local_storage.programming.views_js;
 
     /* add highlight class */
     function addFilterItemActive(data) {
@@ -126,20 +136,20 @@ function startApp() {
     };
 
     /* generate current date and time */
-    elements_html.data_date.forEach((date) => {
+    elements_html.others.data_date.forEach((date) => {
         date.innerHTML = `${date_time_now.date} ${date_time_now.time}`;
     });
 
     /* select the category to be highlighted */
-    elements_html.data_filters.forEach((item) => {
+    elements_html.others.data_filters.forEach((item) => {
         item.addEventListener('click', (event) => {
             const data_event = event.target.getAttribute('data_filter');
-            activateItem(elements_html.data_filters, data_event);
+            activateItem(elements_html.others.data_filters, data_event);
         });
     });
 
     /* login - display alert */
-    elements_html.data_login_button.addEventListener('click', () => {
+    elements_html.others.data_login_button.addEventListener('click', () => {
         alert('Funcionalidade não disponível no momento...');
     });
 
@@ -254,7 +264,7 @@ function startApp() {
 
     /* header - scroll */
     window.addEventListener('scroll', () => {
-        elements_html.header.classList.toggle('shadow', window.scrollY > 0);
+        elements_html.others.header.classList.toggle('shadow', window.scrollY > 0);
     });
 
     /* back to top */
@@ -262,15 +272,15 @@ function startApp() {
         const scroll_top = document.documentElement.scrollTop;
 
         if (scroll_top > 1000) {
-            elements_html.data_back_to_top.style.display = 'block';
+            elements_html.others.data_back_to_top.style.display = 'block';
         }
         else {
-            elements_html.data_back_to_top.style.display = 'none';
+            elements_html.others.data_back_to_top.style.display = 'none';
         };
     });
 
     /* back to top */
-    elements_html.data_back_to_top.addEventListener('click', (event) => {
+    elements_html.others.data_back_to_top.addEventListener('click', (event) => {
         event.preventDefault();
 
         window.scrollTo({
@@ -284,7 +294,6 @@ function startApp() {
         const popup_displayed = sessionStorage.getItem('popup_displayed');
 
         if (!popup_displayed && event.relatedTarget === null) {
-            // elements_html.data_popup.style.display = 'block';
             elements_html.popup.data_popup.style.display = 'block';
         };
     });
