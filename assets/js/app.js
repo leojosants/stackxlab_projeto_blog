@@ -1,5 +1,5 @@
 /* import localStorage */
-import { get_views_posts } from "./local_storage/get_views_posts.js";
+import { get_views_posts } from "./localStorage/get_views_posts.js";
 
 /* import localStorage */
 import {
@@ -12,7 +12,7 @@ import {
     setViewsDrone,
     setViewsPHP,
     setViewsJS,
-} from "./local_storage/save_views_posts.js";
+} from "./localStorage/save_views_posts.js";
 
 /* initialization */
 function startApp() {

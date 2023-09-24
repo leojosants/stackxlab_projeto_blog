@@ -1,6 +1,6 @@
 /* imports */
 import { db } from "./db/data.js";
-import { get_indice } from "./local_storage/get_indice_posts.js";
+import { get_indice } from "./localStorage/get_indice_posts.js";
 
 /* initialization */
 function startApp() {

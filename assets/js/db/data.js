@@ -1,5 +1,5 @@
 /* import localStorage */
-import { get_views_posts } from "../local_storage/get_views_posts.js";
+import { get_views_posts } from "../localStorage/get_views_posts.js";
 
 /* db fake */
 export const db = [
