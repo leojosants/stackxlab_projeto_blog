@@ -1,7 +1,7 @@
 import { indice_card_LS } from "./local_storage/get_keys.js";
-import { data_cards_DB} from './database/cards.js';
+import { data_cards_DB } from './database/cards.js';
 
-// (() => {
+(() => {
 
     /* selection of elements */
     const html_elements = {
@@ -18,11 +18,11 @@ import { data_cards_DB} from './database/cards.js';
 
     /* dynamic and individual loading of each clicked post */
     const load_post = (html_elements) => {
-       
+
         const indice_card = indice_card_LS.indice;
 
         for (const data of data_cards_DB) {
-           
+
             if (indice_card === data.id) {
                 html_elements.post_header_img.setAttribute('src', data.banner_category.src);
                 html_elements.post_header_img.setAttribute('alt', data.banner_category.alt);
@@ -51,7 +51,7 @@ import { data_cards_DB} from './database/cards.js';
 
     /* back to top */
     window.addEventListener('scroll', () => {
-      
+
         const scroll_top = document.documentElement.scrollTop;
 
         if (scroll_top > 100) {
@@ -65,7 +65,7 @@ import { data_cards_DB} from './database/cards.js';
 
     /* back to top */
     html_elements.back_to_top_button.addEventListener('click', (event) => {
-      
+
         event.preventDefault();
 
         window.scrollTo({
@@ -74,4 +74,4 @@ import { data_cards_DB} from './database/cards.js';
         });
     });
 
-// })();
+})();
