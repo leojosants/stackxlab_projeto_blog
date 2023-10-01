@@ -28,7 +28,6 @@ export const data_cards_DB = [
         <strong><i class='bx bxs-hand-right bx-flashing'></i><a href="https://en.wikipedia.org/wiki/Adobe_Firefly" target="_blank" rel="external"> Saiba mais.</a></strong>`,
         profile: {
             src: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60',
-            // src: '/assets/images/profile/fotoProfile.webp',
         },
     },
     {
@@ -50,7 +49,7 @@ export const data_cards_DB = [
         description: `<strong>JavaScript</strong> é uma linguagem de programação <strong>interpretada estruturada</strong>, de <strong>script</strong> em alto nível com <strong>tipagem dinâmica fraca</strong> e multiparadigma. Juntamente com HTML e CSS, o JavaScript é <strong>uma das três principais tecnologias</strong> da World Wide Web.<br /><br />
         <strong><i class='bx bxs-hand-right bx-flashing'></i><a href="https://pt.wikipedia.org/wiki/JavaScript" target="_blank" rel="external"> Saiba mais.</a></strong>`,
         profile: {
-            src: '/assets/images/profile/foto_profile.webp',
+            src: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60',
         },
     },
     {
@@ -72,7 +71,7 @@ export const data_cards_DB = [
         description: `O <strong>Google Glass</strong> é um acessório em forma de óculos que <strong>possibilita a interação</strong> dos usuários com diversos conteúdos em <strong>realidade aumentada</strong>. Também chamado de Project Glass, o eletrônico é capaz de <strong>tirar fotos a partir de comandos de voz</strong>, enviar mensagens instantâneas e realizar <strong>vídeoconferências</strong>.<br /><br />
         <strong><i class='bx bxs-hand-right bx-flashing'></i><a href="https://pt.wikipedia.org/wiki/Project_Glass" target="_blank" rel="external"> Saiba mais.</a></strong>`,
         profile: {
-            src: '/assets/images/profile/foto_profile.webp',
+            src: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60',
         },
     },
     {
@@ -94,7 +93,7 @@ export const data_cards_DB = [
         description: `Por meio de inteligência artificial, o <strong>aplicativo HandTalk</strong> promove a inclusão de pessoas surdas. A plataforma traduz automaticamente textos e áudios em português para a <strong>Língua Brasileira de Sinais (Libras) e para a Língua Americana de Sinais (ASL)</strong>. A ferramenta usa um avatar digital, o personagem chamado Hugo, para <strong>desenvolver os gestos e facilitar a comunicação com pessoas surdas ou com dificuldade auditiva</strong>. Em 2015, foi eleito como o melhor aplicativo de acessibilidade da América Latina pela ONU.<br /><br />
         <strong><i class='bx bxs-hand-right bx-flashing'></i><a href="https://pt.wikipedia.org/wiki/Hand_Talk" target="_blank" rel="external"> Saiba mais.</a></strong>`,
         profile: {
-            src: '/assets/images/profile/foto_profile.webp',
+            src: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60',
         },
     },
     {
@@ -116,7 +115,7 @@ export const data_cards_DB = [
         description: `Python é uma <strong>linguagem de programação de alto nível</strong>, interpretada de script, imperativa, orientada a objetos, funcional,<strong> de tipagem dinâmica e forte</strong>. Foi lançada por Guido van Rossum em 1991.<br /><br />
         <strong><i class='bx bxs-hand-right bx-flashing'></i><a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank" rel="external"> Saiba mais.</a></strong>`,
         profile: {
-            src: '/assets/images/profile/foto_profile.webp',
+            src: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60',
         },
     },
     {
@@ -138,7 +137,7 @@ export const data_cards_DB = [
         description: `É um <strong>relógio de pulso computadorizado</strong> com funcionalidades que <strong>vão além de mostrar as horas</strong>, e é com frequência comparado aos assistentes digitais pessoais.<br /><br />
         <strong><i class='bx bxs-hand-right bx-flashing'></i><a href="https://en.wikipedia.org/wiki/Smartwatch" target="_blank" rel="external"> Saiba mais.</a></strong>`,
         profile: {
-            src: '/assets/images/profile/foto_profile.webp',
+            src: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60',
         },
     },
     {
@@ -160,7 +159,7 @@ export const data_cards_DB = [
         description: `PHP é uma <strong>linguagem de programação interpretada livre</strong>, usada originalmente apenas para o <strong>desenvolvimento de aplicações</strong> presentes e atuantes<strong> no lado do servidor</strong>, capazes de gerar conteúdo dinâmico na World Wide Web.<br /><br />
         <strong><i class='bx bxs-hand-right bx-flashing'></i><a href="https://pt.wikipedia.org/wiki/PHP" target="_blank" rel="external"> Saiba mais.</a></strong>`,
         profile: {
-            src: '/assets/images/profile/foto_profile.webp',
+            src: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60',
         },
     },
     {
@@ -182,14 +181,14 @@ export const data_cards_DB = [
         description: `<strong>Criado pela Midjourney Inc.</strong>, o programa é uma ferramenta que usa <strong>algoritmos avançados de aprendizado de máquina</strong> para gerar imagens a partir de texto. Alguns <strong>resultados são impressionantes</strong>, quase como retirados de artes conceituais para filmes, <strong>enquanto outros podem ser bizarramente</strong> engraçados.<br /><br />
         <strong><i class='bx bxs-hand-right bx-flashing'></i><a href="https://pt.wikipedia.org/wiki/Midjourney" target="_blank" rel="external"> Saiba mais.</a></strong>`,
         profile: {
-            src: '/assets/images/profile/foto_profile.webp',
+            src: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60',
         },
     },
     {
         id: 9,
         title: 'Drone',
         banner_home: {
-            src: '/assets/images/banners/iot/drone.jpg',
+            src: '../../../assets/images/banners/iot/drone.jpg',
             alt: 'Imagem ilustrativa logo IOT.',
         },
         banner_category: {
@@ -204,7 +203,7 @@ export const data_cards_DB = [
         description: `<strong>Veículo aéreo não tripulado</strong>, também conhecido como drone, é todo e qualquer tipo de aeronave que pode ser <strong>controlada nos 3 eixos</strong> e que não necessite de <strong>pilotos embarcados</strong> para ser guiada.<br /><br />
         <strong><i class='bx bxs-hand-right bx-flashing'></i><a href="https://pt.wikipedia.org/wiki/Ve%C3%ADculo_a%C3%A9reo_n%C3%A3o_tripulado" target="_blank" rel="external"> Saiba mais.</a></strong>`,
         profile: {
-            src: '/assets/images/profile/foto_profile.webp',
+            src: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60',
         },
     },
 ];
