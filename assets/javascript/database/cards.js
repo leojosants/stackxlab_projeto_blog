@@ -12,8 +12,8 @@ export const data_cards_DB = [
         id: 1,
         title: 'Adobe Firefly',
         banner_home: {
-            src: 'https://raw.githubusercontent.com/leojosants/stackxlab_projeto_blog/main/assets/images/banners/ia/adobe_firefly.jpg',
-            // src: './assets/images/banners/ia/adobe_firefly.jpg',
+            src: './assets/images/banners/ia/adobe_firefly.jpg',
+            // src: 'https://raw.githubusercontent.com/leojosants/stackxlab_projeto_blog/main/assets/images/banners/ia/adobe_firefly.jpg',
             alt: 'Imagem ilustrativa logo IA.',
         },
         banner_category: {
