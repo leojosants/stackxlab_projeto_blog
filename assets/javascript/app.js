@@ -141,7 +141,8 @@ const execute = (indice_element_view, card_attribute_id, view, key_local_storage
     if (indice === card_attribute_id) {
         view.innerHTML = parseInt(view.innerHTML) + 1;
         localStorage.setItem(key_local_storage, view.innerText);
-        window.location.assign('./assets/post_description/post.html');
+        window.location.assign('../../assets/post_description/post.html');
+        // window.location.assign('./assets/post_description/post.html');
         return;
     }
 };
