@@ -178,13 +178,16 @@ header.shadow .logo {
     object-fit: cover;
     object-position: center;
     border-radius: 0.5rem;
+    margin-top: 1rem;
 }
 
 .category {
+    margin: 1rem;
     font-size: 0.9rem;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--color_1);
+    text-align: center;
 }
 
 .post_title {
@@ -199,6 +202,7 @@ header.shadow .logo {
 
 .post_date {
     display: flex;
+    justify-content: center;
     font-size: 0.875rem;
     font-weight: bold;
     margin-top: 4px;
@@ -313,6 +317,7 @@ header.shadow .logo {
 
 .sub_heading {
     font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .post_text {
@@ -382,21 +387,27 @@ header.shadow .logo {
     text-align: center;
 }
 
-.popup_buttons {
+.popup_content p {
+    margin: 1rem;
+    font-size: 1rem;
+}
+
+.popup_button {
     margin-top: 1.5rem;
 }
 
-.popup_buttons button {
+.popup_button button {
     background-color: var(--color_1);
-    color: var(--color_9);
+    color: black;
     padding: 0.6rem 1.5rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.4s;
+    text-transform: uppercase;
 }
 
-.popup_buttons button:hover {
+.popup_button button:hover {
     background-color: var(--color-12);
 }
 
@@ -442,6 +453,7 @@ header.shadow .logo {
 
     .home_title {
         font-size: 3rem;
+        color: var(--color_1);
     }
     
     .header_title {

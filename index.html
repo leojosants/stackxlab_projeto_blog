@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 	<head>
+		<!--  -->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!--  -->
 		<title>Blog</title>
-		<link rel="stylesheet" href="assets/css/style.css" />
+
+		<!--  -->
 		<link
 			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
 			rel="stylesheet"
 		/>
-		<script type="module" src="assets/js/app.js" defer></script>
+
+		<!--  -->
+		<link rel="stylesheet" href="assets/css/style.css" />
+
+		<!--  -->
+		<script type="module" src="assets/javascript/app.js" defer></script>
 	</head>
 	<body>
 		<!-- Header -->
 		<header>
 			<nav class="nav container">
-				<a href="#" class="logo">pcD<span>eveloper</span><i class='bx bx-accessibility bx-fade-right'></i></a>
-				
+				<a href="#" class="logo">
+					pcD<span>eveloper</span>
+					<i class="bx bx-accessibility bx-fade-right"></i>
+				</a>
+
 				<a href="#" class="login" data_login_button>Login</a>
 			</nav>
 		</header>
@@ -31,302 +43,48 @@
 
 		<!-- Post filter -->
 		<div class="post_filter container">
-			<span class="filter_item filter_item--active" data_filter="all"
+			<span
+				class="filter_item filter_item--active"
+				data_filter="all_categories"
 				>Todas as categorias</span
 			>
-			<span class="filter_item" data_filter="programming">Programação</span>
-			<span class="filter_item" data_filter="ia"
+			<span class="filter_item" data_filter="programming_category"
+				>Linguagem de Programação</span
+			>
+			<span class="filter_item" data_filter="ia_category"
 				>Inteligência Artificial</span
 			>
-			<span class="filter_item" data_filter="iot">Internet das coisas</span>
+			<span class="filter_item" data_filter="iot_category"
+				>Internet das coisas</span
+			>
 		</div>
 
 		<!-- Posts -->
-		<section class="post container">
-			<!-- Post about artificial intelligence - ia -->
-			<div class="post_box adobe_firefly ia" data_post_box data_post>
-				<img
-					class="post_img"
-					src="./assets/images/banners_ia/adobe_firefly.jpg"
-					alt="Imagem de conexões"
-				/>
-
-				<h2 class="category">Inteliência Artificial</h2>
-				<p class="post_title">Adobe Firefly</p>
-				<span class="post_date" data_date>Data</span>
-
-				<p class="post_description">
-					<strong>Primeiro motor de IA para edição de imagens</strong>
-					que possui preenchimento generativo de imagens.
-
-					<!-- Profile -->
-				</p>
-
-				<div class="profile">
-					<img
-						class="profile_img"
-						src="./assets//images/foto_profile.webp"
-						alt="Foto de perfil"
-					/>
-					<span class="category" data_views_adobe_firefly>0</span>
-					<span class="category">visualizações</span>
-					<i class="bx bx-show-alt bx-flashing"></i>
-				</div>
-			</div>
-
-			<!-- Post about programming languages -->
-			<div class="post_box js programming" data_post_box data_post>
-				<img
-					class="post_img"
-					src="./assets/images/banners_programming/banner_js.jpg"
-					alt="Imagem de um tela de códigos de programação"
-				/>
-
-				<h2 class="category">Programação</h2>
-				<p class="post_title">JavaScript</p>
-				<span class="post_date" data_date>Data</span>
-
-				<p class="post_description">
-					<strong>Linguagem de programação</strong> interpretada
-					estruturada, de script em alto nível com tipagem dinâmica fraca e
-					multiparadigma.
-				</p>
-
-				<div class="profile">
-					<img
-						class="profile_img"
-						src="./assets//images/foto_profile.webp"
-						alt="Imagem de perfil"
-					/>
-					<span class="category" data_views_js>0</span>
-					<span class="category">visualizações</span>
-					<i class="bx bx-show-alt bx-flashing"></i>
-				</div>
-			</div>
-
-			<!-- Post about internet of things - iot -->
-			<div class="post_box google_glass iot" data_post_box data_post>
-				<img
-					class="post_img"
-					src="./assets/images/banners_iot/google_glass.jpg"
-					alt="Imagem de dispositivos eletrônicos inteligentes"
-				/>
-				<h2 class="category">Internet das coisas</h2>
-				<p class="post_title">Google Glass</p>
-				<span class="post_date" data_date>Data</span>
-
-				<p class="post_description">
-					<strong>Acessório em forma de óculos</strong> que possibilita a
-					interação dos usuários com conteúdos em realidade aumentada.
-				</p>
-
-				<div class="profile">
-					<img
-						class="profile_img"
-						src="./assets/images/foto_profile.webp"
-						alt="Foto de perfil"
-					/>
-					<span class="category" data_views_google_glass>0</span>
-					<span class="category">visualizações</span>
-					<i class="bx bx-show-alt bx-flashing"></i>
-				</div>
-			</div>
-
-			<!-- Post about artificial intelligence - ia -->
-			<div class="post_box hand_talk ia" data_post_box data_post>
-				<img
-					class="post_img"
-					src="./assets/images/banners_ia/handtalk.jpg"
-					alt="Imagem de uma pessoa segurando um laptop"
-				/>
-
-				<h2 class="category">Inteliência Artificial</h2>
-				<p class="post_title">Hand Talk</p>
-				<span class="post_date" data_date>Data</span>
-
-				<p class="post_description">
-					<strong>Traduz automaticamente</strong> textos e
-					áudios em português para Libras e para a Língua Americana de
-					Sinais (ASL).
-				</p>
-
-				<!-- Profile -->
-				<div class="profile">
-					<img
-						class="profile_img"
-						src="./assets//images/foto_profile.webp"
-						alt="Foto de perfil"
-					/>
-					<span class="category" data_views_hand_talk>0</span>
-					<span class="category">visualizações</span>
-					<i class="bx bx-show-alt bx-flashing"></i>
-				</div>
-			</div>
-
-			<!-- Post about programming languages -->
-			<div class="post_box python programming" data_post_box data_post>
-				<img
-					class="post_img"
-					src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800"
-					alt="Imagem de um livro"
-				/>
-
-				<h2 class="category">Programação</h2>
-				<p class="post_title">Python</p>
-				<span class="post_date" data_date>Data</span>
-
-				<p class="post_description">
-					<strong>Linguagem de programação</strong> de alto nível, interpretada
-					de script, imperativa, orientada a objetos.
-				</p>
-
-				<div class="profile">
-					<img
-						class="profile_img"
-						src="./assets/images/foto_profile.webp"
-						alt="Imagem de perfil"
-					/>
-					<span class="category" data_views_python>0</span>
-					<span class="category">visualizações</span>
-					<i class="bx bx-show-alt bx-flashing"></i>
-				</div>
-			</div>
-
-			<!-- Post about internet of things - iot -->
-			<div class="post_box smartwatch iot" data_post_box data_post>
-				<img
-					class="post_img"
-					src="./assets/images/banners_iot/smartwatch.jpg"
-					alt="Imagem relogio inteligente"
-				/>
-				<h2 class="category">Internet das coisas</h2>
-				<p class="post_title">Smartwatch</p>
-				<span class="post_date" data_date>Data</span>
-
-				<p class="post_description">
-					<strong>Relógio de pulso computadorizado</strong> com funcionalidades que vão
-					além de mostrar as horas.
-				</p>
-
-				<div class="profile">
-					<img
-						class="profile_img"
-						src="./assets/images/foto_profile.webp"
-						alt="Foto de perfil"
-					/>
-					<span class="category" data_views_smartwatch>0</span>
-					<span class="category">visualizações</span>
-					<i class="bx bx-show-alt bx-flashing"></i>
-				</div>
-			</div>
-
-			<!-- Post about programming languages -->
-			<div class="post_box php programming" data_post_box data_post>
-				<img
-					class="post_img"
-					src="https://images.pexels.com/photos/11035390/pexels-photo-11035390.jpeg?auto=compress&cs=tinysrgb&w=600"
-					alt="Imagem de um livro"
-				/>
-
-				<h2 class="category">Programação</h2>
-				<p class="post_title">PHP</p>
-				<span class="post_date" data_date>Data</span>
-
-				<p class="post_description">
-					<strong>Linguagem de programação</strong> interpretada livre, usada para o desenvolvimento de aplicações no lado do servidor.
-				</p>
-
-				<div class="profile">
-					<img
-						class="profile_img"
-						src="./assets/images/foto_profile.webp"
-						alt="Imagem de perfil"
-					/>
-					<span class="category" data_views_php>0</span>
-					<span class="category">visualizações</span>
-					<i class="bx bx-show-alt bx-flashing"></i>
-				</div>
-			</div>
-
-			<!-- Post about artificial intelligence - ia -->
-			<div class="post_box midjourney ia" data_post_box data_post>
-				<img
-					class="post_img"
-					src="./assets/images/banners_ia/midjourney.jpg"
-					alt="Imagem de conexões"
-				/>
-
-				<h2 class="category">Inteliência Artificial</h2>
-				<p class="post_title">Midjourney</p>
-				<span class="post_date" data_date>Data</span>
-
-				<p class="post_description">
-					<strong>Ferramenta que usa algoritmos</strong> avançados de aprendizado de máquina para gerar imagens
-					a partir de texto.
-				</p>
-
-				<!-- Profile -->
-				<div class="profile">
-					<img
-						class="profile_img"
-						src="./assets//images/foto_profile.webp"
-						alt="Foto de perfil"
-					/>
-					<span class="category" data_views_midjourney>0</span>
-					<span class="category">visualizações</span>
-					<i class="bx bx-show-alt bx-flashing"></i>
-				</div>
-			</div>
-
-			<!-- Post about internet of things - iot -->
-			<div class="post_box drone iot" data_post_box data_post>
-				<img
-					class="post_img"
-					src="./assets/images/banners_iot/drone.jpg"
-					alt="Imagem de um drone (Veículo aéreo não tripulado)"
-				/>
-				<h2 class="category">Internet das coisas</h2>
-				<p class="post_title">Drone</p>
-				<span class="post_date" data_date>Data</span>
-
-				<p class="post_description">
-					<strong>Veículo aéreo não tripulado</strong>, controlado sem a necessidade de pilotos embarcados para ser guiada.
-				</p>
-
-				<div class="profile">
-					<img
-						class="profile_img"
-						src="./assets/images/foto_profile.webp"
-						alt="Foto de perfil"
-					/>
-					<span class="category" data_views_drone>0</span>
-					<span class="category">visualizações</span>
-					<i class="bx bx-show-alt bx-flashing"></i>
-				</div>
-			</div>
-		</section>
+		<section class="post container" data_container_all_cards></section>
 
 		<!-- preview icon -->
-		<a id="back_to_top" href="#" data_back_to_top>
+		<a id="back_to_top" href="#" data_back_to_top_button>
 			<i class="bx bx-up-arrow-alt bx-burst"></i>
 		</a>
 
 		<!-- popup -->
-		<div id="popup" data_popup>
+		<div id="popup" data_popup_container>
 			<div class="popup_content">
 				<h2>Não se vá!</h2>
 
 				<p>Consuma nossos conteúdos clicando em um card!</p>
 
-				<div class="popup_buttons">
-					<button id="cancel_button" data_cancel_button>Cancelar</button>
+				<div class="popup_button">
+					<button id="cancel_button" data_popup_cancel_button>
+						Cancelar
+					</button>
 				</div>
 			</div>
 		</div>
 
 		<!-- Footer -->
 		<div class="footer container">
-			<p>leonardo_santos</p>
+			<p style="font-weight: bold;">leonardo_santos</p>
 
 			<div class="social">
 				<a
