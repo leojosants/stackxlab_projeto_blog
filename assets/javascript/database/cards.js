@@ -27,7 +27,8 @@ export const data_cards_DB = [
         description: `<strong>O Adobe Firefly</strong> é o primeiro motor de IA para <strong>edição de imagens</strong> que possui preenchimento generativo de imagens. Esta característica do Firefly permite com que o programa faça <strong>alterações nas imagens sem danificar a estrutura</strong> dela, dando a possibilidade dos usuários em adicionar e remover elementos, podendo também estender as imagens usando o <strong>preenchimento generativo</strong> e preenchê-las com com criações da <strong>própria IA</strong><br /><br />
         <strong><i class='bx bxs-hand-right bx-flashing'></i><a href="https://en.wikipedia.org/wiki/Adobe_Firefly" target="_blank" rel="external"> Saiba mais.</a></strong>`,
         profile: {
-            src: '/assets/images/profile/fotoProfile.webp',
+            src: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60',
+            // src: '/assets/images/profile/fotoProfile.webp',
         },
     },
     {
