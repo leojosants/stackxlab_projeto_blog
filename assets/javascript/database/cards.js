@@ -12,7 +12,8 @@ export const data_cards_DB = [
         id: 1,
         title: 'Adobe Firefly',
         banner_home: {
-            src: '/assets/images/banners/ia/adobe_firefly.jpg',
+            src: 'https://raw.githubusercontent.com/leojosants/stackxlab_projeto_blog/main/assets/images/banners/ia/adobe_firefly.jpg',
+            // src: './assets/images/banners/ia/adobe_firefly.jpg',
             alt: 'Imagem ilustrativa logo IA.',
         },
         banner_category: {
@@ -34,7 +35,7 @@ export const data_cards_DB = [
         id: 2,
         title: 'JavaScript',
         banner_home: {
-            src: '/assets/images/banners/programming/javascript.jpg',
+            src: './assets/images/banners/programming/javascript.jpg',
             alt: 'Imagem ilustrativa de exemplos de linguagens de programação.',
         },
         banner_category: {
@@ -56,7 +57,7 @@ export const data_cards_DB = [
         id: 3,
         title: 'Google Glass',
         banner_home: {
-            src: '/assets/images/banners/iot/google_glass.jpg',
+            src: './assets/images/banners/iot/google_glass.jpg',
             alt: 'Imagem ilustrativa logo IOT.',
         },
         banner_category: {
@@ -78,7 +79,7 @@ export const data_cards_DB = [
         id: 4,
         title: 'Hand Talk',
         banner_home: {
-            src: '/assets/images/banners/ia/handtalk.jpg',
+            src: './assets/images/banners/ia/handtalk.jpg',
             alt: 'Imagem ilustrativa logo IA.',
         },
         banner_category: {
@@ -100,7 +101,7 @@ export const data_cards_DB = [
         id: 5,
         title: 'Python',
         banner_home: {
-            src: '/assets/images/banners/programming/python.jpeg',
+            src: './assets/images/banners/programming/python.jpeg',
             alt: 'Imagem ilustrativa de exemplos de linguagens de programação.',
         },
         banner_category: {
@@ -122,7 +123,7 @@ export const data_cards_DB = [
         id: 6,
         title: 'Smartwatch',
         banner_home: {
-            src: '/assets/images/banners/iot/smartwatch.jpg',
+            src: './assets/images/banners/iot/smartwatch.jpg',
             alt: 'Imagem ilustrativa logo IOT.',
         },
         banner_category: {
@@ -144,7 +145,7 @@ export const data_cards_DB = [
         id: 7,
         title: 'PHP',
         banner_home: {
-            src: '/assets/images/banners/programming/php.jpeg',
+            src: './assets/images/banners/programming/php.jpeg',
             alt: 'Imagem ilustrativa de exemplos de linguagens de programação.',
         },
         banner_category: {
@@ -166,7 +167,7 @@ export const data_cards_DB = [
         id: 8,
         title: 'Midjourney',
         banner_home: {
-            src: '/assets/images/banners/ia/midjourney.jpg',
+            src: './assets/images/banners/ia/midjourney.jpg',
             alt: 'Imagem ilustrativa logo IA.',
         },
         banner_category: {
@@ -188,7 +189,7 @@ export const data_cards_DB = [
         id: 9,
         title: 'Drone',
         banner_home: {
-            src: '../../../assets/images/banners/iot/drone.jpg',
+            src: './assets/images/banners/iot/drone.jpg',
             alt: 'Imagem ilustrativa logo IOT.',
         },
         banner_category: {
