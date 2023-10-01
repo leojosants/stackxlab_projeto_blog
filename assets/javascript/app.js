@@ -1,6 +1,6 @@
 import { data_cards_DB } from './database/cards.js';
 
-(() => {
+// (() => {
 
     /* element selection */
     const html_parent_cards = {
@@ -327,4 +327,4 @@ import { data_cards_DB } from './database/cards.js';
         });
     });
 
-})();
+// })();

@@ -1,7 +1,7 @@
 import { indice_card_LS } from "./local_storage/get_keys.js";
 import { data_cards_DB} from './database/cards.js';
 
-(() => {
+// (() => {
 
     /* selection of elements */
     const html_elements = {
@@ -74,4 +74,4 @@ import { data_cards_DB} from './database/cards.js';
         });
     });
 
-})();
+// })();
